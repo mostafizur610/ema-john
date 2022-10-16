@@ -2,8 +2,9 @@
     display: flex;
     border: 1px solid gray;
     width: 571px;
-    margin: 0 auto;
+    margin: 21px auto;
     padding: 8px;
+    border-radius: 15px;
 }
 
 .review-details-container {
@@ -27,9 +28,21 @@
     border-radius: 50%;
     border: 0;
     background-color: aqua;
+    cursor: pointer;
 }
 
 .delete-icon {
     font-size: 31px;
     color: mediumseagreen;
+
+}
+
+.btn-delete:hover {
+    background-color: rgb(127, 109, 209);
+
+}
+
+.delete-container {
+    display: flex;
+    align-items: center;
 }
