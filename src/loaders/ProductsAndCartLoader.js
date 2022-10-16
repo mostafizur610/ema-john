@@ -4,10 +4,11 @@ export const productsAndCartLoader = async () => {
     // get products data
     const productsData = await fetch('products.json');
     const products = await productsData.json();
+    // console.log(products);
 
     // get cart 
     const saveCart = getStoredCart();
-    const previousCart = [];
+    const initialCart = [];
     // console.log(products);
     for (const id in saveCart) {
         // console.log(id);
@@ -17,9 +18,9 @@ export const productsAndCartLoader = async () => {
             const quantity = saveCart[id];
             // console.log(id, quantity);
             addedProduct.quantity = quantity;
-            previousCart.push(addedProduct);
+            initialCart.push(addedProduct);
         }
     }
 
-    return { products, previousCart };
+    return { products: products, initialCart: initialCart };
 }
